@@ -1,0 +1,130 @@
+
+*{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.turn{
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+.board{
+    display: grid;
+    height: 60vh;
+    width: 50vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid black;
+    gap: 2px;
+    padding: 2px;
+    background-color: burlywood;
+}
+
+.cell{
+    display:  flex;
+    border: 1px solid black;
+    font-size: 32px;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-menu{
+    background-color: rgb(125, 0, 179);
+    box-sizing: border-box;
+    width: 35vw;
+    height: 350px;
+    min-width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0px 2px 16px rgba(231, 231, 231, 0.356);
+    overflow-y: auto;
+}
+
+
+.start-menu input{
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    width: 100%;
+}
+
+.start-menu button{
+    padding: 0.8rem;
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: 0.18rem solid rgb(145, 145, 145);
+    fill: none;
+}
+
+.start-menu label{
+    margin-bottom: 0.8rem;
+}
+
+.start-menu p{
+    margin: 0.2rem;
+    padding-left: 0.3rem;
+}
+
+
+.label-grp{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+    padding: 2rem;
+    box-sizing: border-box; /* include padding and border in the height calculation */
+    border-right: 1px solid white; /* set the border-right to 1px solid white */
+}
+
+.btn-grp{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.restart{
+    font-size: 32px;
+    font-weight: 800;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out
+}
+
+.restart:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+.pop-up{
+    background-color: rgba(0, 0, 0, 0.637);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    backdrop-filter: blur(15px);
+}
